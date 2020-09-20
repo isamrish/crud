@@ -1,0 +1,14 @@
+{
+  "name": "json-server",
+  "version": "1.0.0",
+  "description": "mock json server",
+  "main": "index.js",
+  "author": "isamrish",
+  "license": "MIT",
+  "scripts": {
+    "server": "./node_modules/.bin/json-server db.json --port 5000"
+  },
+  "dependencies": {
+    "json-server": "^0.16.1"
+  }
+}

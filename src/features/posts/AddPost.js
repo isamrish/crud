@@ -2,16 +2,13 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { nanoid } from "@reduxjs/toolkit";
-import { addPost, addNewPost } from "./postSlice"
+import { addNewPost } from "./postSlice"
 import { unwrapResult } from '@reduxjs/toolkit'
 export const AddPost = () => {
 
   const [title, SetTitle] = useState('');
   const [body, SetBody] = useState('');
-
-  const [isError, SetError] = useState(false);
   const [addRequestStatus, setAddRequestStatus] = useState('idle')
-
 
   const canSave = [title, body].every(Boolean) && addRequestStatus === 'idle'
 
@@ -45,11 +42,6 @@ export const AddPost = () => {
   return (
     <div className="add-post-form">
       <h2>Add New post</h2>
-      <div>
-        {
-          isError ? <p className="text-danger">Either title or body is empty</p> : null
-        }
-      </div>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="Title">
           <Form.Label>Title</Form.Label>

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { nanoid } from "@reduxjs/toolkit";
 import { updatePost, selectPostById } from "./postSlice";
 export const EditPostPage = ({ match }) => {
   const { postId } = match.params;

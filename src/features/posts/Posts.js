@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 export const Posts = ({ posts }) => {
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridAutoRows: 'max-content', gridGap: "3rem" }}>
+    <div className="posts-block">
       {
         posts.map(post => {
           return (
-            <Card style={{ width: '18rem', minHeight: '320px' }} key={post.id}>
+            <Card className="post-card" key={post.id}>
               <Card.Body>
                 <Card.Title>{post.title}</Card.Title>
                 <Card.Text>

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { selectPostById, deletePost } from "./postSlice";
@@ -33,14 +33,17 @@ export const SinglePostPage = ({ match }) => {
   }
 
   return (
-    <section style={{ maxWidth: "1020px", margin: 'auto' }} className="m-auto p-3">
+    <section className="m-auto p-3 single-post">
       <article>
         <h2>{post.title}</h2>
         <p>{post.body}</p>
-        <Link to={`/edit-post/${post.id}`}>Edit Post</Link>
-        <br />
-        <Button onClick={handleDelete}>Delete</Button>
+        <hr />
+        <div className="d-flex justify-content-between align-items-center">
+          <Link to={`/edit-post/${post.id}`}>Edit Post</Link>
+          <Button variant="danger" onClick={handleDelete}>Delete</Button>
+        </div>
       </article>
+
     </section>
   )
 }

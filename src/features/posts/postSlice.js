@@ -3,7 +3,7 @@ import Axios from 'axios';
 import { useSelector } from 'react-redux';
 
 // const API_ENDPOINT = `http://localhost:5000/posts`;
-const API_ENDPOINT = `https://json-serve.vercel.app`;
+const API_ENDPOINT = `https://immense-forest-73656.herokuapp.com/posts`;
 const initialState = {
   posts: [],
   status: 'idle',

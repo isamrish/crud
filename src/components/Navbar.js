@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const NavbarComponent = () => {
   return (
     <Navbar bg="light" expand="lg">
-      <Navbar.Brand>Crud App</Navbar.Brand>
+      <Navbar.Brand>CRUD App</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
